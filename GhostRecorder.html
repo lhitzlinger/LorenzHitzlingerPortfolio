@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lorenz Hitzlinger - GhostRecorder</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #1e1e1e 0%, #2c2c2c 100%);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a { color: #4da3ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, h2 { font-weight: 700; margin-bottom: 10px; }
+
+    /* Hero Section */
+    .hero { text-align: center; padding: 40px 20px; }
+    .hero h1 { font-size: 2.4rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.2rem; opacity: 0.85; margin-bottom: 20px; }
+
+    /* Video Container – Videos nebeneinander, keine Wraps */
+    .video-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+    .video-container video {
+      width: 48%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    /* Project Overview & Tasks */
+    .overview, .tasks {
+      margin-top: 40px;
+      padding: 24px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+    }
+    .overview h2, .tasks h2 { font-size: 1.6rem; margin-top: 0; margin-bottom: 16px; }
+    .overview ul, .tasks ul { list-style: none; margin: 0; padding: 0; }
+    .overview ul li, .tasks ul li {
+      font-size: 1.1rem; margin-bottom: 6px; padding-left: 14px; position: relative;
+    }
+    .overview ul li::before, .tasks ul li::before {
+      content: "•"; color: #4da3ff; position: absolute; left: 0;
+    }
+
+    /* Description */
+    .description { margin-top: 40px; }
+    .description h2 { font-size: 1.6rem; margin-bottom: 12px; }
+    .description p { font-size: 1.1rem; opacity: 0.9; }
+
+    /* Buttons */
+    .button-row { margin-top: 40px; display: flex; gap: 15px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      background: #4da3ff;
+    }
+    .btn:hover { background: #337acc; }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <h1>Ghost Recorder: A Motion Capture System for VR Headsets</h1>
+      <p>Developed @MAN Energy Solutions (Everllence)</p>
+      <div class="video-container">
+        <video controls autoplay muted loop playsinline>
+          <source src="Images/GhostRecorder_6.mp4" type="video/mp4" />
+          Dein Browser unterstützt keine Videos.
+        </video>
+        <video controls autoplay muted loop playsinline>
+          <source src="Images/GhostRecorder_9 (1).mp4" type="video/mp4" />
+          Dein Browser unterstützt keine Videos.
+        </video>
+      </div>
+    </header>
+
+    <!-- Project Overview -->
+    <section class="overview">
+      <h2>Project Overview</h2>
+      <ul>
+        <li><strong>Engine:</strong> Unity</li>
+        <li><strong>Programming Language:</strong> C#</li>
+        <li><strong>Used Hardware:</strong> Meta Quest 3</li>
+        <li><strong>Team Size:</strong> 2</li>
+        <li><strong>Status:</strong> finished</li>
+      </ul>
+    </section>
+
+    <!-- Description -->
+    <section class="description">
+      <h2>Description</h2>
+      <p>
+During my working student position, I developed, together with another working student, a VR motion capture system that allows individual work steps to be recorded for VR training. This is intended to serve as an interactive tutorial, enabling new employees to see directly on the models in their VR training what they need to do.      </p>
+    </section>
+
+    <!-- Tasks -->
+    <section class="tasks">
+      <h2>My Tasks</h2>
+      <ul>
+        <li>Implementation of the System</li>
+        <li>Recording of Tasks for a specific Training</li>
+        <li>Integrating different types of interactable objects in the system</li>
+      </ul>
+    </section>
+
+    <!-- Buttons -->
+    <div class="button-row">
+      <a href="../home.html" class="btn">← Home</a>
+    </div>
+  </main>
+</body>
+</html>

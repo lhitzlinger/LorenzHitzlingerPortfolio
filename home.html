@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Lorenz Hitzlinger</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#98a0b3;
+      --accent:#7c5cff;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      --maxwidth:1100px;
+      font-size:16px;
+    }
+    *{box-sizing:border-box}
+
+body {
+  background: linear-gradient(180deg, #121212 0%, #1b1b1b 50%, #252525 100%);
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+    .container{max-width:var(--maxwidth);margin:0 auto;padding:32px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#5dd8ff);display:flex;align-items:center;justify-content:center;font-weight:800;color:#071021}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .cta{background:linear-gradient(90deg,var(--accent),#5dd8ff);color:#071021;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:28px}
+    .intro h1{font-size:clamp(28px,4vw,44px);margin:0 0 10px}
+    .intro p{color:var(--muted);margin:0 0 20px;max-width:60ch}
+    .links{display:flex;gap:12px}
+    .links a{padding:10px 12px;border-radius:10px;background:var(--glass);color:var(--muted);text-decoration:none;font-weight:600}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.012));padding:18px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .profile { display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center; }
+    .avatar { width: 160px; height: 160px; border-radius: 20px; overflow: hidden; background: none; }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .meta{color:var(--muted)}
+
+    .section{margin-top:36px}
+    .section h2{margin:0 0 14px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .project{padding:0;border-radius:12px;overflow:hidden;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column}
+    .project img{width:100%;height:140px;object-fit:cover}
+    .project-content{padding:14px;flex:1;display:flex;flex-direction:column}
+    .project h3{margin:0 0 8px;font-size:16px}
+    .project p{margin:0;color:var(--muted);font-size:14px;flex:1}
+    .project .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--muted)}
+
+    footer{margin-top:48px;padding:20px 0;text-align:center;color:var(--muted)}
+
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .container{padding:22px}
+    }
+    @media (max-width:560px){
+      nav{display:none}
+      .grid{grid-template-columns:1fr}
+      .avatar{width:120px;height:120px;font-size:36px}
+      .logo .mark{width:40px;height:40px}
+    }
+    .project-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+  height: 100%;
+}
+    a:hover{opacity:0.95}
+    .project:hover{transform:translateY(-6px);transition:transform .25s ease}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">LH</div>
+        <div>
+          <div style="font-weight:800">Lorenz Hitzlinger</div>
+          <div style="font-size:12px;color:var(--muted)">Programmer • Unity • Game Development</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="intro">
+          <h1>Hi — I am Lorenz Hitzlinger<br>I build interactive Experiences & Video Games</h1>
+         
+          <div class="links">
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="https://www.linkedin.com/in/lorenz-hitzlinger-8761a21a5/?originalSubdomain=de" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+
+        <aside class="card profile">
+          <div class="avatar"><img src="Images/Lorenz_Bild.jpg" alt="Avatar von Dein Name" /></div>
+          <div style="font-weight:700">Lorenz Hitzlinger</div>
+          <div class="meta">Unity Developer &amp; C++ Developer — Germany</div>
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <a class="tag" href="#">Unity</a>
+            <a class="tag" href="#">C#</a>
+            <a class="tag" href="#">C++</a>
+            <a class="tag" href="#">Qt</a>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projects" class="section">
+        <h2>Pojects</h2>
+        <div class="grid">
+          <article class="project">
+            <a href="SpacialAnchor.html" class ="project-link">
+            <img src="Images/AR_Anchorsystem.png" alt="AR_Anchorsystem_Banner">
+            <div class="project-content">
+              <h3>Spacial Anchor System for AR Layoutplanning @MAN Energy Solutions</h3>
+              <p>Custom Spacial Anchor System for the Meta Quest 3</p>
+              <div class="tags"><span class="tag">Unity</span><span class="tag">AR</span><span class="tag">C#</span></div>
+            </div>
+            </a>
+          </article>
+
+          <article class="project">
+            <a href="GhostRecorder.html" class ="project-link">
+            <img src="Images/GhostRecorder.png" alt="Ghost Banner">
+            <div class="project-content">
+              <h3>Ghost Recorder @MAN Energy Solutions</h3>
+              <p>A Motion Capture System for the Meta Quest 3, which allows users to record their own tutorials for VR Trainings.</p>
+              <div class="tags"><span class="tag">VR</span><span class="tag">Motion Capture</span><span class="tag">Unity</span><span class="tag">C#</span></div>
+            </div>
+            </a>
+          </article>
+
+          <article class="project">
+            <a href="ArcadyVillage.html" class ="project-link">
+            <img src="Images/ArcadyVillage_HeaderCapsule.png" alt="Arcady Village">
+            <div class="project-content">
+              <h3>Arcady Village</h3>
+              <p>A cozy singleplayer game about managing your own Arcade Hall. A mix of Management, Life Simulation and a collection of Arcade Games</p>
+              <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Blender</span><span class="tag">Cascadeur</span></div>
+            </div>
+            </a>
+          </article>
+
+          <article class="project">
+            <a href="MasterThesis.html" class ="project-link">
+            <img src="Images/MasterThesis_Banner.png" alt="Master Thesis Banner">
+            <div class="project-content">
+              <h3>Master's Thesis</h3>
+              <p>Planning system for daily schedules of NPCs in Video Games, using Hierarchical Task Networks and Goal Oriented Action Planning </p>
+              <div class="tags"><span class="tag">Unity</span><span class="tag">AI</span><span class="tag">GOAP</span><span class="tag">HTN</span></div>
+            </div>
+          </a>
+          </article>
+
+          <article class="project">
+             <a href="VRTrainings.html" class ="project-link">
+            <img src="Images/VR_Trainings_Banner.png" alt="VR Trainings Banner">
+            <div class="project-content">
+              <h3>VR Trainings @MAN Energy Solutions</h3>
+              <p>Creation of VR Trainings at MAN Energy Solutions.</p>
+              <div class="tags"><span class="tag">VR</span><span class="tag">Unity</span><span class="tag">C#</span></div>
+            </div>
+             </a>
+          </article>
+
+          <article class="project">
+            <a href="BachelorThesis.html" class ="project-link">
+            <img src="Images/Bachelor'sThesis_Banner.png" alt="Bachelor's Thesis Banner">
+            <div class="project-content">
+              <h3>Bachelor's Thesis</h3>
+              <p>Procedural Animation System for meele combat systems in Video Games.</p>
+              <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Inverse Kinematics</span></div>
+            </div>
+          </a>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <h2>About me</h2>
+        <div class="card" style="padding:18px;margin-top:12px">
+          <p style="color:var(--muted);margin:0">I began my Bachelor’s degree in Game Engineering in the winter semester of 2018 at Kempten University of Applied Sciences and completed it successfully in 2022. Immediately afterward, I started my Master’s degree in Game Engineering and Visual Computing, also at Kempten University of Applied Sciences, which I completed with excellent results in 2025. </br> </br> During my Bachelor's studies, I completed a six-month internship at Immersight GmbH, where I gained in-depth experience in Wondows software development using Qt and C++. During my Master's studies, I worked for 2.5 years as a working student at MAN Energy Solutions (now Everllence). My tasks there mainly involved developing VR visualizations and programming new features as well as improving existing ones. </br> </br> I place high value on clean and well-readable code and am always interested in improving my workflow in creating software constructs.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="card" style="display:flex;gap:18px;align-items:center;justify-content:space-between;margin-top:12px;flex-wrap:wrap">
+          <div style="min-width:220px">
+            <strong>Email</strong>
+            <div style="color:var(--muted)">lorenz.hitzlinger@gmail.com</div>
+          </div>
+          <div style="min-width:220px">
+            <strong>Mobile</strong>
+                <div style="color:var(--muted)">+49 1520 1372065</div>          </div>
+          <div style="min-width:220px">
+            <strong>Location</strong>
+            <div style="color:var(--muted)">Germany</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+  </div>
+
+  <script>
+    try{
+      document.querySelector('footer').innerText = '© ' + new Date().getFullYear() + ' Dein Name — Designed with ❤️';
+    }catch(e){}
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>

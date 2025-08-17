@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lorenz Hitzlinger - Arcady Village</title>
+  <style>
+    /* ----- Global Styles ----- */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #1e1e1e 0%, #2c2c2c 100%);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a { color: #4da3ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    /* ----- Hero Section ----- */
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .hero h1 {
+      font-size: 6.4rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+    .hero video {
+      margin-top: 20px;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+ /* ----- Project Overview & Aufgaben ----- */
+    .overview, .tasks {
+      margin-top: 40px;
+      padding: 24px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+    }
+    .overview h2, .tasks h2 {
+      font-size: 1.6rem;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+    .overview ul, .tasks ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .overview ul li, .tasks ul li {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      padding-left: 14px;
+      position: relative;
+    }
+    .overview ul li::before, .tasks ul li::before {
+      content: "•";
+      color: #4da3ff;
+      position: absolute;
+      left: 0;
+    }
+
+    /* ----- Description Section ----- */
+    .description {
+      margin-top: 40px;
+    }
+    .description h2 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+    .description p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* ----- Buttons ----- */
+    .button-row {
+      margin-top: 40px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      background: #4da3ff;
+    }
+    .btn:hover {
+      background: #337acc;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Hero Section -->
+    <header class="hero">
+      <h1>Arcady Village</h1>
+      <p>Your own Arcade Hall Adventure</p>
+      <video controls autoplay muted loop playsinline>
+        <source src="Images/ArcadyVillageTrailer.mp4" type="video/mp4" />
+        Dein Browser unterstützt keine Videos.
+      </video>
+    </header>
+
+    <!-- Project Overview -->
+    <section class="overview">
+      <h2>Project Overview</h2>
+      <ul>
+        <li><strong>Engine:</strong> Unity</li>
+        <li><strong>Programming Language:</strong> C#</li>
+        <li><strong>Team Size: 2</li>
+        <li><strong>Status:</strong> In Development</li>
+        <li><strong>Since:</strong> 10/2022 </li>
+      </ul>
+    </section>
+
+    <!-- Description -->
+    <section class="description">
+      <h2>Descritpion</h2>
+      <p>
+        Arcady Village is a cozy game about managing your own arcade hall. Get to know the residents of Arcady Village and beat their high scores in all the playable arcade games. The game is comparable to farming simulations like Stardew Valley or Animal Crossing, but instead of the farming aspect, you manage your arcade hall and beat high scores in arcade games. 
+      </p>
+    </section>
+     <!-- Meine Aufgaben -->
+    <section class="tasks">
+      <h2>My Tasks</h2>
+      <ul>
+        <li>Implementation of the NPC System (Master's Thesis) (HTN/GOAP)</li>
+        <li>Development of all kinds of Gameplay Systems and Arcade Games </br> (Save & Load, Player Movement, Placing Arcade Machines ...)</li>
+        <li>3D Modelling of all kinds of Objects with Blender</li>
+        <li>Creating Humanoid Animations with Cascadeur</li>
+        <li>All kinds of 2D sprites for Arcade Games (Aseprite, Inkscape, Drawing Tablet)</li>
+      </ul>
+    </section>
+  </br>
+
+    <!-- Back Button -->
+      <a href="../home.html" class="btn">← Home</a>
+      <a href="https://store.steampowered.com/app/2866530/Arcady_Village/?l=english" target="_blank" class="btn">🎮 Arcady Village on Steam</a>
+  </main>
+</body>
+</html>
+
